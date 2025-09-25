@@ -5,6 +5,12 @@ try:
     segment1 = float(input("Введите длину первого отрезка:"))
     segment2 = float(input("Введите длину второго отрезка(меньше первого отрезка):"))
     remainder = segment1 % segment2
-    print("Незанятая часть отрезка А:",remainder)
+    if segment1 <= 0 or segment2 <= 0:
+        print("Неправильный ввод. Введите положительное число.")
+    else:
+        if segment2 > segment1:
+            print("Неправильный ввод. Второе число должно быть меньше первого")
+        else:
+            print("Незанятая часть отрезка А:",remainder)
 except ValueError:
     print("Неправильный ввод данных. Введите число.")
