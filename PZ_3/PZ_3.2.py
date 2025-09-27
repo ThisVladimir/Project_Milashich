@@ -1,0 +1,13 @@
+try:
+    month = int(input("Введите номер месяца(1 - январь, 2 - февраль и т.д.): "))
+    if month < 1 or month > 12:
+        print("Неправильный ввод. Введите число от 1 до 12.")
+    else:
+        if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10  or month == 12:
+            print("В данном месяце 31 день.")
+        elif month == 2:
+            print("В данном месяце 28 дней.")
+        elif month == 4 or month == 6 or month == 9 or month == 11:
+            print("В данном месяце 30 дней.")
+except ValueError:
+    print("Неправильный ввод. Введите целое цисло.")
